@@ -36,7 +36,7 @@ class _UTI_page extends State<UTI_page> {
               children: [
                 Container(
                   padding:
-                      EdgeInsets.symmetric(horizontal: 10.0, vertical: 2.0),
+                  EdgeInsets.symmetric(horizontal: 10.0, vertical: 2.0),
                   margin: EdgeInsets.all(10.0),
                   child: Image.asset(
                     'assets/icon_medico.png',
@@ -46,7 +46,7 @@ class _UTI_page extends State<UTI_page> {
                 Expanded(
                   child: Container(
                     padding: EdgeInsets.all(0.0),
-                    margin: EdgeInsets.all(0.1),
+                    margin: const EdgeInsets.all(0.1),
                     child: Center(
                       child: Text(
                         'Encontrar um Oncologista perto de mim',
@@ -75,14 +75,8 @@ class _UTI_page extends State<UTI_page> {
                       )
                     ],
                     onChanged: (value) {}),
-                Expanded(
-                  child: DropdownButtonFormField(
-                      dropdownColor: Colors.pinkAccent,
-                      decoration: InputDecoration(
-                        border:
-                        OutlineInputBorder(borderRadius: BorderRadius.circular(5.0)),
-                        filled: true,
-                      ),
+
+                  DropdownButton(
                       hint: Text('EPECIALIDADE'),
                       items: const [
                         DropdownMenuItem(
@@ -95,14 +89,13 @@ class _UTI_page extends State<UTI_page> {
                         ),
                       ],
                       onChanged: (value) {}),
-                ),
               ],
             ),
             Row(
               children: [
                 Container(
                   padding:
-                      EdgeInsets.symmetric(horizontal: 10.0, vertical: 30.0),
+                  EdgeInsets.symmetric(horizontal: 10.0, vertical: 30.0),
                   margin: EdgeInsets.all(10.0),
                   child: Image.asset(
                     'assets/medico2.png',
